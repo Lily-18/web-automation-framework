@@ -1,0 +1,50 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "test_cases.test_admin_login",
+          "name": "test_title_verification",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: assert False\nDetails: self = <test_cases.test_admin_login.Test_01_Admin_login object at 0x000001D2CD2BFB10>\nsetup = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"71a731588b1f0fb75dd639c1a6c8b6c1\")>\n\n    def test_title_verification(self, setup):\n        self.driver = setup\n        self.driver.get(self.admin_page_url)\n        actual_title = self.driver.title\n        expected_title = \"OrangeHRM111\"\n    \n        if actual_title == expected_title:\n            assert True\n        else:\n            self.take_screenshot(\"test_title_verification\")\n>           assert False\nE           assert False\n\ntest_cases\\test_admin_login.py:39: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "test_cases.test_admin_login",
+          "name": "test_valid_admin_login",
+          "developer": "-",
+          "test_description": "",
+          "status": "Passed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "test_cases.test_admin_login",
+          "name": "test_invalid_admin_login",
+          "developer": "-",
+          "test_description": "",
+          "status": "Passed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "12 Jul 2025, 23:52",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

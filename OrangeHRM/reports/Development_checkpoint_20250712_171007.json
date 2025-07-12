@@ -1,0 +1,50 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "test_cases.test_admin_login",
+          "name": "test_title_verification",
+          "developer": "-",
+          "test_description": "",
+          "status": "Passed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "test_cases.test_admin_login",
+          "name": "test_valid_admin_login",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: assert False\nDetails: self = <test_cases.test_admin_login.Test_01_Admin_login object at 0x0000028037870050>\nsetup = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"e500eb49eff3d5810045446f9b2f6d60\")>\n\n    def test_valid_admin_login(self, setup):\n        self.driver = setup\n        self.driver.get(self.admin_page_url)\n        self.admin_lp = login_admin_page(self.driver)\n        self.admin_lp.enter_username(self.username)\n        self.admin_lp.enter_password(self.password)\n        self.admin_lp.click_login()\n    \n        dashboard_heading = WebDriverWait(self.driver, 10).until(\n            EC.visibility_of_element_located((By.XPATH, \"//h6[text()='Dashboard']\"))\n        )\n    \n        if dashboard_heading.text == \"Sonam\":\n            assert True\n        else:\n            self.take_screenshot(\"test_valid_admin_login\")\n>           assert False\nE           assert False\n\ntest_cases\\test_admin_login.py:55: AssertionError",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "test_cases.test_admin_login",
+          "name": "test_invalid_admin_login",
+          "developer": "-",
+          "test_description": "",
+          "status": "Passed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "12 Jul 2025, 17:10",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

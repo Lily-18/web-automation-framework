@@ -1,0 +1,50 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "test_cases.test_admin_login",
+          "name": "test_title_verification",
+          "developer": "-",
+          "test_description": "",
+          "status": "Passed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "test_cases.test_admin_login",
+          "name": "test_valid_admin_login",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: type object 'By' has no attribute 'xpath'\nDetails: self = <test_cases.test_admin_login.Test_01_Admin_login object at 0x000002207C947390>\n\n    def test_valid_admin_login(self):\n        self.driver=webdriver.Chrome()\n        self.driver.get(self.admin_page_url)\n        self.admin_lp=login_admin_page(self.driver)\n>       self.admin_lp.enter_username(self.username)\n\ntest_cases\\test_admin_login.py:31: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <base_pages.login_admin_page.login_admin_page object at 0x000002207BFBFA10>, username = 'Admin'\n\n    def enter_username(self,username):\n>       self.driver.find_element(By.xpath, self.textbox_username_name).send_keys(username)\n                                 ^^^^^^^^\nE       AttributeError: type object 'By' has no attribute 'xpath'\n\nbase_pages\\login_admin_page.py:14: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "test_cases.test_admin_login",
+          "name": "test_invalid_admin_login",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Message: AttributeError: type object 'By' has no attribute 'xpath'\nDetails: self = <test_cases.test_admin_login.Test_01_Admin_login object at 0x000002207CA08050>\n\n    def test_invalid_admin_login(self):\n        self.driver=webdriver.Chrome()\n        self.driver.get(self.admin_page_url)\n        self.admin_lp=login_admin_page(self.driver)\n>       self.admin_lp.enter_username(self.invalid_username)\n\ntest_cases\\test_admin_login.py:46: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <base_pages.login_admin_page.login_admin_page object at 0x000002207CA2D450>, username = 'SSSAAA'\n\n    def enter_username(self,username):\n>       self.driver.find_element(By.xpath, self.textbox_username_name).send_keys(username)\n                                 ^^^^^^^^\nE       AttributeError: type object 'By' has no attribute 'xpath'\n\nbase_pages\\login_admin_page.py:14: AttributeError",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "12 Jul 2025, 16:21",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}
