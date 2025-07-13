@@ -2,7 +2,7 @@ trigger:
 - main  # or your default branch name
 
 variables:
-  python.version: '3.9'  # specify your Python version
+  python.version: '3.13.0'  # specify your Python version
   vmImageName: 'ubuntu-latest'  # or 'windows-latest' if you prefer
 
 stages:
