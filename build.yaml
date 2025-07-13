@@ -1,0 +1,44 @@
+trigger:
+- main  # or your default branch name
+
+variables:
+  python.version: '3.9'  # specify your Python version
+  vmImageName: 'ubuntu-latest'  # or 'windows-latest' if you prefer
+
+stages:
+- stage: BuildAndTest
+  displayName: 'Build and Test'
+  jobs:
+  - job: Build
+    displayName: 'Build and Test Python Selenium'
+    pool:
+      vmImage: $(vmImageName)
+    
+    steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '$(python.version)'
+        addToPath: true
+    
+    - script: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+      displayName: 'Install dependencies'
+    
+    - script: |
+        python -m pytest --junitxml=test-results.xml
+      displayName: 'Run tests with pytest'
+      
+    # Publish test results
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFiles: '**/test-results.xml'
+        testRunTitle: 'Python Selenium Tests'
+        failTaskOnFailedTests: true
+    
+    # Optional: Publish code coverage results if you have coverage configured
+    # - task: PublishCodeCoverageResults@1
+    #   inputs:
+    #     codeCoverageTool: 'cobertura'
+    #     summaryFileLocation: '**/coverage.xml'
+    #     reportDirectory: '**/htmlcov'

@@ -1,0 +1,5 @@
+selenium
+pytest
+pytest-html  # optional for HTML reports
+pytest-xdist  # optional for parallel test execution
+webdriver-manager  # helpful for managing browser drivers
